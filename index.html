@@ -152,9 +152,9 @@
     const trialPage = {
         type: jsPsychSurveyLikert,
         preamble: `<div style="text-align:left; background-color:lightblue; padding:20px; max-width:1000px;">
-                   <p>${trials[scenario]["intro"]}</p>
-                   <p>${trials[scenario]["designed_condition"][condition[0]]}</p>
-                   <p>${trials[scenario]["used_condition"][condition[1]]}</p>
+                   ${trials[scenario]["intro"]}<br><br>
+                   ${trials[scenario]["designed_condition"][condition[0]]}<br><br>
+                   ${trials[scenario]["used_condition"][condition[1]]}
                    </div>
                    <div style="text-align:center"><br>`,
         questions: [
