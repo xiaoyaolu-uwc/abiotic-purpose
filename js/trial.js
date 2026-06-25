@@ -1,7 +1,7 @@
 
 const trials = {
     "quartz": {
-        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.<br><br>",
+        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.",
         "designed_condition": {
             "designed": "The hexagonal shape that quartz changes into in certain environments was created by a process of natural selection and evolved specifically so that quartz is resistant to heat.",
             "not_designed": "The hexagonal shape that quartz takes in certain environments was created by a process of natural selection, though it did not evolve so that quartz is resistant to heat, but rather for other reasons."
@@ -16,7 +16,7 @@ const trials = {
     },
 
     "zamborite": {
-        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.<br><br>",
+        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.",
         "designed_condition": {
             "designed": "The rectangular shape that zamborite changes into in certain environments was created by a process of natural selection and evolved specifically so that zamborite is resistant to pressure.",
             "not_designed": "The rectangular shape that zamborite changes into in certain environments was created by a process of natural selection, though it did not evolve so that zamborite is resistant to pressure, but rather for other reasons."
@@ -31,7 +31,7 @@ const trials = {
     },
 
     "micronite": {
-        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.<br><br>",
+        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.",
         "designed_condition": {
             "designed": "The octagonal shape that micronite changes into in certain environments was created by a process of natural selection and evolved specifically so that micronite is resistant to radiation.",
             "not_designed": "The octagonal shape that micronite takes in certain environments was created by a process of natural selection, though it did not evolve so that micronite is resistant to radiation, but rather for other reasons."
@@ -46,7 +46,7 @@ const trials = {
     },
 
     "hexium": {
-        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.<br><br>",
+        "intro": "Natural selection and evolution turn out to be very broad processes, applying to biological organisms and also to minerals.",
         "designed_condition": {
             "designed": "The quadrantal shape that hexium changes into in certain environments was created by a process of natural selection and evolved specifically so that hexium is resistant to cold.",
             "not_designed": "The quadrantal shape that hexium takes in certain environments was created by a process of natural selection, though it did not evolve so that hexium is resistant to cold but rather for other reasons."
