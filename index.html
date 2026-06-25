@@ -80,19 +80,16 @@
         on_finish: () => {
 
             jsPsych.data.displayData();
-            let responseData = {};
-            for (const trialPage of jsPsych.data.get().filter({ task: "trial_page" }).values()) {
-                const scenarioIdx = trialPage["idx"];
-                responseData[`scenario_${scenarioIdx}`] = trialPage["scenario"];
-                responseData[`scenario_${scenarioIdx}_designed_condition`] = trialPage["designed_condition"];
-                responseData[`scenario_${scenarioIdx}_used_condition`] = trialPage["used_condition"];
-                responseData[`scenario_${scenarioIdx}_response`] = trialPage["response"]["Q0"] + 1; // likert scale starts at 0
-            }
+            const trialData = jsPsych.data.get().filter({ task: "trial_page" }).values()[0];
+            const compreData = jsPsych.data.get().filter({ task: "comprehension_check" }).values()[0];
 
-            for (const comprePage of jsPsych.data.get().filter({ task: "comprehension_check" }).values()) {
-                const scenarioIdx = comprePage["idx"];
-                responseData[`scenario_${scenarioIdx}_compre_response`] = comprePage["options"][comprePage["response"]];
-            }
+            let responseData = {
+                "scenario": trialData["scenario"],
+                "designed_condition": trialData["designed_condition"],
+                "used_condition": trialData["used_condition"],
+                "response": trialData["response"]["Q0"] + 1, // likert scale starts at 0
+                "compre_response": compreData["options"][compreData["response"]],
+            };
 
             console.log(responseData);
 
@@ -140,66 +137,62 @@
     // Instructions
     timeline.push(intro)
 
-    // Randomization
-    const expConditionList = jsPsych.randomization.shuffle([
+    // Randomization: pick one scenario and one condition (fully between-subjects)
+    const scenario = jsPsych.randomization.shuffle(Object.keys(trials))[0];
+    const condition = jsPsych.randomization.shuffle([
         ["designed", "used"],
         ["designed", "not_used"],
         ["not_designed", "used"],
         ["not_designed", "not_used"]
-    ]);
+    ])[0];
+    console.log("scenario:", scenario);
+    console.log("condition:", condition);
 
-    const scenarioList = jsPsych.randomization.shuffle(Object.keys(trials));
-    console.log(scenarioList);
-    console.log(expConditionList);
-
-    // Trials
-    for (var i = 0; i < 4; i++) {
-
-        const trialPage = {
-            type: jsPsychSurveyLikert,
-            preamble: `<div style="text-align:left; background-color:lightblue; padding:20px; max-width:1000px;">${trials[scenarioList[i]]["intro"]}
-                       ${trials[scenarioList[i]]["designed_condition"][expConditionList[i][0]]}
-                       ${trials[scenarioList[i]]["used_condition"][expConditionList[i][1]]}<br><br></div>
-                       <div style="text-align:center"><br>`,
-            questions: [
-                {
-                    prompt: `<b>Please indicate the extent to which you agree or disagree with the following statement:</b><br><br>
-                             <div style="font-size:18px;">${trials[scenarioList[i]]["purpose_question"]}<br><br></div>`,
-                    labels: [
-                        `<br><div style="font-size:17px;">strongly<br>disagree</div>`,
-                        `<br><div style="font-size:17px;">disagree</div>`,
-                        `<br><div style="font-size:17px;">slightly<br>disagree</div>`,
-                        `<br><div style="font-size:17px;">neither disagree or agree</div>`,
-                        `<br><div style="font-size:17px;">slightly<br>agree</div>`,
-                        `<br><div style="font-size:17px;">agree</div>`,
-                        `<br><div style="font-size:17px;">strongly<br>agree</div>`
-                    ],
-                    required: true,
-                },
-            ],
-            data: {
-                task: "trial_page",
-                "scenario": scenarioList[i],
-                "designed_condition": expConditionList[i][0],
-                "used_condition": expConditionList[i][1],
-                "idx": i + 1,
-            }
-        };
-        timeline.push(trialPage);
-
-        const comprePage = {
-            type: jsPsychHtmlButtonResponse,
-            data: {
-                task: "comprehension_check",
-                "options": trials[scenarioList[i]]["options"],
-                "idx": i + 1,
-                "scenario": scenarioList[i],
+    // Trial
+    const trialPage = {
+        type: jsPsychSurveyLikert,
+        preamble: `<div style="text-align:left; background-color:lightblue; padding:20px; max-width:1000px;">
+                   <p>${trials[scenario]["intro"]}</p>
+                   <p>${trials[scenario]["designed_condition"][condition[0]]}</p>
+                   <p>${trials[scenario]["used_condition"][condition[1]]}</p>
+                   </div>
+                   <div style="text-align:center"><br>`,
+        questions: [
+            {
+                prompt: `<b>Please indicate the extent to which you agree or disagree with the following statement:</b><br><br>
+                         <div style="font-size:18px;">${trials[scenario]["purpose_question"]}<br><br></div>`,
+                labels: [
+                    `<br><div style="font-size:17px;">strongly<br>disagree</div>`,
+                    `<br><div style="font-size:17px;">disagree</div>`,
+                    `<br><div style="font-size:17px;">slightly<br>disagree</div>`,
+                    `<br><div style="font-size:17px;">neither disagree or agree</div>`,
+                    `<br><div style="font-size:17px;">slightly<br>agree</div>`,
+                    `<br><div style="font-size:17px;">agree</div>`,
+                    `<br><div style="font-size:17px;">strongly<br>agree</div>`
+                ],
+                required: true,
             },
-            stimulus: `<div>${trials[scenarioList[i]]["comprehension_question"]}</div><br>`,
-            choices: trials[scenarioList[i]]["options"],
-        };
-        timeline.push(comprePage);
-    }
+        ],
+        data: {
+            task: "trial_page",
+            "scenario": scenario,
+            "designed_condition": condition[0],
+            "used_condition": condition[1],
+        }
+    };
+    timeline.push(trialPage);
+
+    const comprePage = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: "comprehension_check",
+            "options": trials[scenario]["options"],
+            "scenario": scenario,
+        },
+        stimulus: `<div>${trials[scenario]["comprehension_question"]}</div><br>`,
+        choices: trials[scenario]["options"],
+    };
+    timeline.push(comprePage);
 
     // Demographics
     timeline.push(demographic_form)
