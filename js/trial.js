@@ -12,8 +12,8 @@ const trials = {
                 "not_used": "When people discovered quartz, they noted the hexagonal shape that it can take, and thought about what they could do with it. They decided not to use its hexagonal shape to make it resistant to heat. Indeed, they made the decision to use it only for other things."
             },
             "purpose_question": "The purpose of the hexagonal shape of quartz is to make it resistant to heat.",
-            "comprehension_question": "According to the passage, do natural selection and evolution apply to quartz?",
-            "options": ["Yes", "No"]
+            "comprehension_question": "According to the passage, the shape that quartz takes in certain environments is:",
+            "options": ["hexagonal", "rectangular", "octagonal"]
         },
 
         "zamborite": {
@@ -27,8 +27,8 @@ const trials = {
                 "not_used": "When people discovered zamborite, they noted the rectangular shape it can take, and thought about what they could do with it. They decided not to use its rectangular shape for making it resistant to pressure. Indeed, they made the decision to use it only for other things."
             },
             "purpose_question": "The purpose of zamborite's rectangular shape is to make it resistant to pressure.",
-            "comprehension_question": "According to the passage, do natural selection and evolution apply to zamborite?",
-            "options": ["Yes", "No"]
+            "comprehension_question": "According to the passage, the shape that zamborite takes in certain environments is:",
+            "options": ["rectangular", "hexagonal", "quadrantal"]
         },
 
         "micronite": {
@@ -42,8 +42,8 @@ const trials = {
                 "not_used": "When people discovered micronite, they noted the octagonal shape that it can take, and thought about what they could do with it. They decided not to use its octagonal shape to make it resistant to radiation. Indeed, they made the decision to use it only for other things."
             },
             "purpose_question": "The purpose of the octagonal shape of micronite is to make it resistant to radiation.",
-            "comprehension_question": "According to the passage, do natural selection and evolution apply to micronite?",
-            "options": ["Yes", "No"]
+            "comprehension_question": "According to the passage, the shape that micronite takes in certain environments is:",
+            "options": ["octagonal", "quadrantal", "hexagonal"]
         },
 
         "hexium": {
@@ -57,8 +57,8 @@ const trials = {
                 "not_used": "When people discovered hexium, they noted the quadrantal shape that it can take, and thought about what they could do with it. They decided not to use its quadrantal shape to make it resistant to cold. Indeed, they made the decision to use it only for other things."
             },
             "purpose_question": "The purpose of hexium's quadrantal shape is to make it resistant to cold.",
-            "comprehension_question": "According to the passage, do natural selection and evolution apply to hexium?",
-            "options": ["Yes", "No"]
+            "comprehension_question": "According to the passage, the shape that hexium takes in certain environments is:",
+            "options": ["quadrantal", "octagonal", "rectangular"]
         },
     },
 
