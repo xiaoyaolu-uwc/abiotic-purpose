@@ -64,7 +64,7 @@ const trials = {
 
     "organisms": {
         "honey": {
-            "intro": "In a faraway forest, in a land called Neb, there is an animal named Zerp. She is an insect about the size of a fly, but she is very fuzzy and has ten legs. The people of Neb have also discovered that they can use Zerp to produce a sweet purple liquid, kind of like honey, but with a nutty flavor.<br><br>",
+            "intro": "In a faraway forest, in a land called Neb, there is an animal named Zerp. She is an insect about the size of a fly, but she is very fuzzy and has ten legs. The people of Neb have also discovered that they can use Zerp to produce a sweet purple liquid, kind of like honey, but with a nutty flavor.",
             "designed_condition": {
                 "designed": "Zerp is a product of an evolutionary process. That process selected for animals like her because they made purple honey.",
                 "not_designed": "Zerp is a product of an evolutionary process. That process selected for animals like her for something other than making purple honey."
@@ -78,7 +78,7 @@ const trials = {
             "options": ["10 legs", "2 heads", "a long neck"],
         },
         "webs": {
-            "intro": "Jig lives on a small, remote island. The island, called Tralay, is somewhere in the middle of the South Pacific. Jig moves around Tralay a lot. But people can usually find him near bodies of water. He is round and has a shell, a bit like a turtle. But, unlike turtles, Jig can be used to spin sticky webs to catch insects.<br><br>",
+            "intro": "Jig lives on a small, remote island. The island, called Tralay, is somewhere in the middle of the South Pacific. Jig moves around Tralay a lot. But people can usually find him near bodies of water. He is round and has a shell, a bit like a turtle. But, unlike turtles, Jig can be used to spin sticky webs to catch insects.",
             "designed_condition": {
                 "designed": "Jig exists because, over a great many years, animals like him evolved on this island in order to spin sticky webs to catch insects.",
                 "not_designed": "Jig exists because, over a great many years, animals like him evolved on this island, though not in order to spin sticky webs to catch insects."
@@ -92,7 +92,7 @@ const trials = {
             "options": ["a shell", "wings", "pincers"]
         },
         "pollinate": {
-            "intro": "Vulpan is a mysterious animal native to a rainforest called Xola. Vulpan is very similar to a bee, except that she is far larger and has a tail. Vulpan lives in a hollowed-out log and people have found that she can be used to pollinate flowers.<br><br>",
+            "intro": "Vulpan is a mysterious animal native to a rainforest called Xola. Vulpan is very similar to a bee, except that she is far larger and has a tail. Vulpan lives in a hollowed-out log and people have found that she can be used to pollinate flowers.",
             "designed_condition": {
                 "designed": "Vulpan is a product of evolution, which created animals like her to pollinate flowers.",
                 "not_designed": "Vulpan is a product of evolution, which created animals like her, but not to pollinate flowers."
@@ -107,7 +107,7 @@ const trials = {
 
         },
         "element": {
-            "intro": "Xan lives in the frozen tundra of Siberia. He is a gigantic herbivore with a long neck that he can use to reach up into the high branches on pine trees. In the ground around where Xan lives, there is a rare enzyme, called N34. The locals have discovered that Xan can be used as a source of N34 because the enzyme is produced in his digestive tract.<br><br>",
+            "intro": "Xan lives in the frozen tundra of Siberia. He is a gigantic herbivore with a long neck that he can use to reach up into the high branches on pine trees. In the ground around where Xan lives, there is a rare enzyme, called N34. The locals have discovered that Xan can be used as a source of N34 because the enzyme is produced in his digestive tract.",
             "designed_condition": {
                 "designed": "Xan and animals like him were created by evolution. They evolved to produce N34.",
                 "not_designed": "Xan and animals like him were created by evolution. Though they evolved, it was not to produce N34."
@@ -124,7 +124,7 @@ const trials = {
 
     "artifacts": {
         "barrels": {
-            "intro": "Sunsplash is a water park on the edge of a wetland nature preserve. It\'s a very popular summertime attraction. Next to many of the buildings at Sunsplash there are large barrels. These barrels could be used to gather rainwater, which could be filtered and used to fill the pools and fountains at Sunsplash.<br><br>",
+            "intro": "Sunsplash is a water park on the edge of a wetland nature preserve. It\'s a very popular summertime attraction. Next to many of the buildings at Sunsplash there are large barrels. These barrels could be used to gather rainwater, which could be filtered and used to fill the pools and fountains at Sunsplash.",
             "designed_condition": {
                 "designed": "These barrels were actually designed and manufactured specifically to be used in that way.",
                 "not_designed": "These barrels were not actually designed or manufactured to be used in that way."
@@ -138,7 +138,7 @@ const trials = {
             "options": ["many barrels", "a big playground", "no fountains"],
         },
         "sound_system": {
-            "intro": "Ariana, as a big music fan, owns an expensive QR54 sound system. The speakers can reach incredible volumes. This means that, if she cranks it up, everyone within a block or two can hear the music.<br><br>",
+            "intro": "Ariana, as a big music fan, owns an expensive QR54 sound system. The speakers can reach incredible volumes. This means that, if she cranks it up, everyone within a block or two can hear the music.",
             "designed_condition": {
                 "designed": "In fact, the company that built Ariana\'s QR54 sound system designed it specifically to play music at incredible volumes.",
                 "not_designed": "In fact, the company that built Ariana\'s QR54 sound system did not design it to play music at incredible volumes."
@@ -152,7 +152,7 @@ const trials = {
             "options": ["everyone can hear it", "they will break", "her mom will complain"],
         },
         "scalpel": {
-            "intro": "Doctor Winters has a kit of surgical tools that she takes with her whenever she performs delicate operations. One of the tools is a scalpel with a distinctive shape that enables it to cleanly slice tissue around arteries, without cutting the arteries themselves. This keeps patients from bleeding out.<br><br>",
+            "intro": "Doctor Winters has a kit of surgical tools that she takes with her whenever she performs delicate operations. One of the tools is a scalpel with a distinctive shape that enables it to cleanly slice tissue around arteries, without cutting the arteries themselves. This keeps patients from bleeding out.",
             "designed_condition": {
                 "designed": "The company that manufactured these tools specially designed this scalpel to slice tissue around arteries.",
                 "not_designed": "The company that manufactured these tools did not specially design this scalpel to slice tissue around arteries."
@@ -166,7 +166,7 @@ const trials = {
             "options": ["a distinctive shape", "a beautiful handle", "her initials engraved in the side"],
         },
         "drug": {
-            "intro": "Vivamore is a brand name drug first developed in the 1960s. Vivamore has several different kinds of effects on the body. However, back in the 60\'s, it was often prescribed to boost prothrombin levels.<br><br>",
+            "intro": "Vivamore is a brand name drug first developed in the 1960s. Vivamore has several different kinds of effects on the body. However, back in the 60\'s, it was often prescribed to boost prothrombin levels.",
             "designed_condition": {
                 "designed": "Indeed, the scientists who first created vivamore were specifically trying to develop a drug to boost prothrombin.",
                 "not_designed": "Interestingly, though, the scientists who first created vivamore were not trying to develop a drug to boost prothrombin."
