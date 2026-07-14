@@ -181,3 +181,14 @@ const trials = {
         },
     },
 };
+
+// A final, broader Yes/No comprehension check asked once at the end of the
+// study (after all 4 trials), about whether natural selection/evolution
+// applies to the participant's assigned domain. Only asked for domains whose
+// vignettes actually invoke natural selection (minerals, organisms);
+// artifacts are not framed as evolving, so there is no entry for that domain
+// and the question is skipped for those participants.
+const finalQuestions = {
+    "minerals": "According to the passages you read, do minerals evolve through a process of natural selection?",
+    "organisms": "According to the passages you read, do animals evolve through a process of natural selection?",
+};

@@ -96,6 +96,11 @@
                 responseData[`scenario_${scenarioIdx}_compre_response`] = comprePage["options"][comprePage["response"]];
             }
 
+            const finalComprePage = jsPsych.data.get().filter({ task: "final_comprehension_check" }).values()[0];
+            if (finalComprePage) {
+                responseData["final_compre_response"] = finalComprePage["options"][finalComprePage["response"]];
+            }
+
             console.log(responseData);
 
             let gender = jsPsych.data.get().filter({ "page_type": "participant_survey" }).values()[0]["response"].gender
@@ -208,6 +213,23 @@
             choices: compre_options,
         };
         timeline.push(comprePage);
+    }
+
+    // Final, broader comprehension check about natural selection/evolution
+    // in the participant's assigned domain (skipped for domains, like
+    // artifacts, that aren't framed as evolving).
+    if (finalQuestions[domain]) {
+        const finalComprePage = {
+            type: jsPsychHtmlButtonResponse,
+            data: {
+                task: "final_comprehension_check",
+                "domain": domain,
+                "options": ["Yes", "No"],
+            },
+            stimulus: `<div>${finalQuestions[domain]}</div><br>`,
+            choices: ["Yes", "No"],
+        };
+        timeline.push(finalComprePage);
     }
 
     // Demographics
