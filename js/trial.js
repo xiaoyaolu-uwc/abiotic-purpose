@@ -180,15 +180,75 @@ const trials = {
             "options": ["created in the 60s", "very expensive", "made of gold"],
         },
     },
+
+    "body_parts": {
+        "tail": {
+            "intro": "On a planet far far away there is an animal called Wovek. Intellectually, Wovek is quite similar to human beings. But his species looks very different from ours. One of the big differences is that Wovek's species has tails, which are long and have a flat shape like a paddle. If they slam their tails on the ground, it makes a rumbling sound. The bigger they are, the deeper the rumble.",
+            "designed_condition": {
+                "designed": "Wovek\'s tail was created by a process of natural selection and evolved specifically for members of his species to display their might.",
+                "not_designed": "Wovek\'s tail was created by a process of natural selection, though it did not evolve for members of his species to display their might."
+            },
+            "used_condition": {
+                "used": "Wovek himself often slams his tail on the ground to display his might. He is committed to using his tail only in this way.",
+                "not_used": "Wovek himself never slams his tail on the ground to display his might. He is committed to using his tail only in other ways.",
+            },
+            "purpose_question": "The purpose of Wovek\'s tail is to display his might.",
+            "comprehension_question": "Wovek\'s tail is:",
+            "options": ["flat", "round", "short"],
+        },
+        "sense_organ": {
+            "intro": "Bonabu lives on the planet Quaylar in the Andromeda galaxy. Civilization on Quaylar is much the same as human civilization was in the year 1800. However, Bonabu's species differs from humans in that they have an organ on their chests, a bit like a human nose. They can use this organ to detect chemical compounds in the air. For instance, roo berries, which are found all over the planet, release particles that these chest organs can detect.",
+            "designed_condition": {
+                "designed": "Bonabu\'s chest organ evolved over many years and was selected for because it enabled animals like Bonabu to detect roo berries.",
+                "not_designed": "Bonabu\'s chest organ evolved over many years, though it was not selected for because it enabled animals like Bonabu to detect roo berries."
+            },
+            "used_condition": {
+                "used": "It is Bonabu\'s custom to use her chest organ only for detecting roo berries. She would never use it for anything else.",
+                "not_used": "It is Bonabu\'s custom to never use her chest organ for detecting roo berries. She would only use it for something else.",
+            },
+            "purpose_question": "The purpose of Bonabus\' chest organ is to detect roo berries.",
+            "comprehension_question": "Bonabu\'s chest organ is:",
+            "options": ["like a nose", "like an eye", "like an ear"]
+        },
+        "horns": {
+            "intro": "There is a moon, called Anteros, orbiting a gas giant planet on the other side of the universe. Tramler is native to Anteros. His species is very similar to humans in terms of psychology. But Tramler\'s species has four legs and horns that come out of the sides of their heads. In the past, they would fight with these horns.",
+            "designed_condition": {
+                "designed": "Tramler\'s horns emerged through natural selection and evolved specifically for fighting.",
+                "not_designed": "Tramler\'s horns emerged through natural selection, though they evolved for something other than fighting."
+            },
+            "used_condition": {
+                "used": "Tramler has made a personal decision to use his horns for fighting. He specifically uses them only for fighting.",
+                "not_used": "Tramler has made a personal decision <i>not</i> to use his horns for fighting. He specifically uses them only for things other than fighting.",
+            },
+            "purpose_question": "The purpose of Tramler\'s horns is for fighting.",
+            "comprehension_question": "Tramler\'s horns are:",
+            "options": ["on the sides of his head", "on the top of his head", "on his back"]
+        },
+        "echolocation": {
+            "intro": "Pamvir lives on a planet in a faraway galaxy. Her species is technologically advanced, though they look very different from humans. Most notably, Pamvir\'s species has very large, highly sensitive ears. Like bats with echolocation, they can use their large ears to track others, even in the dark.",
+            "designed_condition": {
+                "designed": "Pamvir\'s large ears are a product of natural selection, which led to their emergence in order for animals like Pamvir to track others.",
+                "not_designed": "Pamvir\'s large ears are a product of natural selection. Yet, they did not emerge in order for animals like Pamvir to track others."
+            },
+            "used_condition": {
+                "used": "Pamvir uses her large ears to track others. Indeed, she is determined only to use them for this one thing.",
+                "not_used": "Pamvir does <i>not</i> use her large ears to track others. Indeed, she is determined to use them only for other things.",
+            },
+            "purpose_question": "The purpose of Pamvirs\' large ears is to track others.",
+            "comprehension_question": "Pamvir\'s ears are:",
+            "options": ["highly sensitive", "pointed", "floppy"]
+        },
+    },
 };
 
 // A final, broader Yes/No comprehension check asked once at the end of the
 // study (after all 4 trials), about whether natural selection/evolution
 // applies to the participant's assigned domain. Only asked for domains whose
-// vignettes actually invoke natural selection (minerals, organisms);
-// artifacts are not framed as evolving, so there is no entry for that domain
-// and the question is skipped for those participants.
+// vignettes actually invoke natural selection (minerals, organisms,
+// body_parts); artifacts are not framed as evolving, so there is no entry
+// for that domain and the question is skipped for those participants.
 const finalQuestions = {
     "minerals": "According to the passages you read, do minerals evolve through a process of natural selection?",
     "organisms": "According to the passages you read, do animals evolve through a process of natural selection?",
+    "body_parts": "According to the passages you read, do body parts evolve through a process of natural selection?",
 };
