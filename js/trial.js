@@ -218,7 +218,7 @@ const trials = {
             },
             "used_condition": {
                 "used": "Tramler has made a personal decision to use his horns for fighting. He specifically uses them only for fighting.",
-                "not_used": "Tramler has made a personal decision <i>not</i> to use his horns for fighting. He specifically uses them only for things other than fighting.",
+                "not_used": "Tramler has made a personal decision not to use his horns for fighting. He specifically uses them only for things other than fighting.",
             },
             "purpose_question": "The purpose of Tramler\'s horns is for fighting.",
             "comprehension_question": "Tramler\'s horns are:",
@@ -232,7 +232,7 @@ const trials = {
             },
             "used_condition": {
                 "used": "Pamvir uses her large ears to track others. Indeed, she is determined only to use them for this one thing.",
-                "not_used": "Pamvir does <i>not</i> use her large ears to track others. Indeed, she is determined to use them only for other things.",
+                "not_used": "Pamvir does not use her large ears to track others. Indeed, she is determined to use them only for other things.",
             },
             "purpose_question": "The purpose of Pamvirs\' large ears is to track others.",
             "comprehension_question": "Pamvir\'s ears are:",
